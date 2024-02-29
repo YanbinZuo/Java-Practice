@@ -6,7 +6,7 @@ public class Shadowing {
   public static void main(String[] args) {
     System.out.println(x);  // 90
     int x = 40; // the class variable at line 4 is shadowed by this
-    // if scop is overlapping, the variable with the higher level scope will be hidden
+    // if scope is overlapping, the variable with the higher level scope will be hidden
     System.out.println(x);  // 40
     fun();  // 90
   }

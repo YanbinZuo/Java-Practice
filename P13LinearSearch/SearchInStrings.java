@@ -2,12 +2,14 @@ package P13LinearSearch;
 
 public class SearchInStrings {
   public static void main(String[] args) {
+    // String name = null;
+    // String name = "";
     String name = "Jimmy";
     char target = 'i';
     System.out.println(search(name, target));
   }
   static boolean search(String str, char target) {
-    if(str.length() == 0) {
+    if(str == null || str.length() == 0) {
       return false;
     }
 
@@ -19,7 +21,7 @@ public class SearchInStrings {
     return false;
   }
   static boolean search2(String str, char target) {
-    if(str.length() == 0) {
+    if(str == null || str.length() == 0) {
       return false;
     }
 

@@ -3,7 +3,7 @@ package P14BinarySearch;
 public class BinarySearch {
   public static void main(String[] args) {
       // arr have to be sorted in ascending order
-      int[] arr = {-9, -5, 0, 3, 6, 9};
+      int[] arr = {-9, -5, 0, 1, 3, 6, 9};
       int target = 3;
       int ans = binarySearch(arr, target);
       System.out.println(ans);
@@ -17,12 +17,12 @@ public class BinarySearch {
     while(start <= end) {
       // int mid = (start + end) / 2  // => might be possible that (start + end) exceeds the range of int in Java
       int mid = start + (end - start) / 2;
-      if(arr[mid] == target) {
+      if(target == arr[mid]) {
         return mid;
       }
-      if(arr[mid] < target) {
+      if(target > arr[mid]) { // target is in right side
         start = mid + 1;
-      } else {
+      } else {  // target is in left side
         end = mid - 1;
       }
     }
