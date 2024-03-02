@@ -3,12 +3,12 @@ package P15BSInterviewQs;
 public class Floor {
   public static void main(String[] args) {
     int[] arr = {2,3,5,9,14,16,18};
-    int target = 19;
+    int target = 6;
     int ans = floor(arr, target);
     System.out.println(ans);
   }
 
-  // return the index of largest no <= target
+  // return the index of largest number <= target
   // if the target is smaller than the smallest number in the array, return -1
   // hint: very similar to BS, but return end instead of -1 if not found
   static int floor(int[] arr, int target) {
@@ -23,7 +23,7 @@ public class Floor {
       if(arr[mid] == target) {
         return mid;
       }
-      if(arr[mid] < target) {
+      if(target > arr[mid]) {
         start = mid + 1;
       } else {
         end = mid - 1;
