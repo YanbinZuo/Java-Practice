@@ -8,7 +8,22 @@ public class CyclicSort {
     cyclicSort(arr);
     System.out.println(Arrays.toString(arr));
   }
-  static void cyclicSort(int[] arr) {
+
+    // Kunal's solution
+    static void cyclicSort(int[] arr) {
+      int i = 0;
+      while(i < arr.length) {
+        int correct = arr[i] - 1;
+        if(arr[i] != arr[correct]) {
+          swap(arr, i, correct);
+        } else {
+          i++;
+        }
+      }
+    }
+
+  // my solution
+  static void cyclicSort1(int[] arr) {
     for(int i=0; i<arr.length; i++) {
       while(arr[i] - 1 != i) {
         swap(arr, i, arr[i]-1);
