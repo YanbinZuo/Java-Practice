@@ -64,6 +64,21 @@ public class LL {
     size++;
   }
 
+  // insert using recursion
+  public void insertRec(int val, int index) {
+    head = insertRec(val, index, head);
+  }
+  private Node insertRec(int val, int index, Node node) {
+    if(index == 0) {
+      Node temp = new Node(val, node);
+      size++;
+      return temp;
+    }
+
+    node.next = insertRec(val, index-1, node.next);
+    return node;
+  }
+
   public int deleteFirst() {
     if(head == null) {
       // Return -1 to indicate the list is empty
@@ -145,6 +160,18 @@ public class LL {
       temp = temp.next;
     }
     System.out.println("END");
+  }
+
+  // recursion reverse
+  public void reverse(Node node) {
+    if(node == tail) {
+      head = tail;
+      return;
+    }
+    reverse(node.next);
+    tail.next = node;
+    tail = node;
+    tail.next = null;
   }
 
 }

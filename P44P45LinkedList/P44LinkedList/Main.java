@@ -18,5 +18,10 @@ public class Main {
     list.insert(list.size()+3, 990);
     list.insert(2, 2);
     list.display();
+    list.insertRec(12, 3);
+    list.display();
+
+    list.reverse(list.get(0));
+    list.display();
   }
 }

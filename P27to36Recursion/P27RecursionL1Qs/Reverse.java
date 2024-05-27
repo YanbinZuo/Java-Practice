@@ -32,6 +32,9 @@ public class Reverse {
   public static void main(String[] args) {
     // rev1(1234);
     // System.out.println(sum);
+    // rev1(12345);
+    // // will cause issue if continue with the rev1 function
+    // System.out.println(sum);
 
     System.out.println(rev2(1234));
     System.out.println(isPalindrome(1221));
