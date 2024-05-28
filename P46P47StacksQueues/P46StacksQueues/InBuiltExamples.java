@@ -1,4 +1,4 @@
-package P46P47StacksQueues;
+package P46P47StacksQueues.P46StacksQueues;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

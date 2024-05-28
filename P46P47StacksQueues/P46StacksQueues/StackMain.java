@@ -1,4 +1,4 @@
-package P46P47StacksQueues;
+package P46P47StacksQueues.P46StacksQueues;
 
 public class StackMain {
   public static void main(String[] args) throws StackException {

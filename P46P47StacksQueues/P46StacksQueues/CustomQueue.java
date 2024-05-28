@@ -1,4 +1,4 @@
-package P46P47StacksQueues;
+package P46P47StacksQueues.P46StacksQueues;
 
 public class CustomQueue {
   private int[] data;
